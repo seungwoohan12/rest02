@@ -128,3 +128,18 @@ img {
   background: rgba(200, 150, 10, 0.1);
   color: var(--color-accent-yellow);
 }
+
+/* ── Material Symbols ── */
+.ms-icon {
+  font-family: 'Material Symbols Rounded';
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  font-style: normal;
+  user-select: none;
+  display: inline-block;
+  line-height: 1;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+}

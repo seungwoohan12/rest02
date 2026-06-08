@@ -1,10 +1,34 @@
 import './About.css';
 
 const VALUES = [
-  { icon: '🎯', title: '고객 중심', desc: '모든 결정의 기준은 고객의 성공입니다.' },
-  { icon: '🚀', title: '기술 혁신', desc: '최신 기술로 더 나은 솔루션을 만듭니다.' },
-  { icon: '🤝', title: '신뢰와 책임', desc: '약속을 지키고 결과에 책임을 집니다.' },
-  { icon: '📈', title: '지속 성장', desc: '고객과 함께 성장하는 파트너십을 추구합니다.' },
+  {
+    icon: 'favorite',
+    bg: 'rgba(139, 26, 26, 0.08)',
+    color: 'var(--color-accent-red)',
+    title: '고객 중심',
+    desc: '모든 결정의 기준은 고객의 성공입니다.',
+  },
+  {
+    icon: 'rocket_launch',
+    bg: 'rgba(26, 58, 107, 0.08)',
+    color: 'var(--color-primary)',
+    title: '기술 혁신',
+    desc: '최신 기술로 더 나은 솔루션을 만듭니다.',
+  },
+  {
+    icon: 'verified',
+    bg: 'rgba(42, 79, 143, 0.08)',
+    color: 'var(--color-primary-light)',
+    title: '신뢰와 책임',
+    desc: '약속을 지키고 결과에 책임을 집니다.',
+  },
+  {
+    icon: 'trending_up',
+    bg: 'rgba(200, 150, 10, 0.08)',
+    color: 'var(--color-accent-yellow)',
+    title: '지속 성장',
+    desc: '고객과 함께 성장하는 파트너십을 추구합니다.',
+  },
 ];
 
 export default function About() {
@@ -44,7 +68,17 @@ export default function About() {
             <div className="about__values">
               {VALUES.map((v, i) => (
                 <div key={i} className="about__value-card">
-                  <span className="about__value-icon">{v.icon}</span>
+                  <div
+                    className="about__value-icon"
+                    style={{ background: v.bg }}
+                  >
+                    <span
+                      className="ms-icon"
+                      style={{ color: v.color, fontVariationSettings: "'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24" }}
+                    >
+                      {v.icon}
+                    </span>
+                  </div>
                   <div>
                     <h4 className="about__value-title">{v.title}</h4>
                     <p className="about__value-desc">{v.desc}</p>

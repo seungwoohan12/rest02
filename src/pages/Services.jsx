@@ -2,7 +2,9 @@ import './Services.css';
 
 const SERVICES = [
   {
-    icon: '💻',
+    icon: 'laptop_mac',
+    iconBg: 'rgba(139, 26, 26, 0.09)',
+    iconColor: 'var(--color-accent-red)',
     tag: '프로그램 개발',
     tagType: 'tag-red',
     title: '소프트웨어\n& 앱 개발',
@@ -10,7 +12,9 @@ const SERVICES = [
     features: ['Windows / macOS 앱', 'Android / iOS 앱', 'API 설계 및 개발', '데이터베이스 설계'],
   },
   {
-    icon: '🌐',
+    icon: 'language',
+    iconBg: 'rgba(26, 58, 107, 0.09)',
+    iconColor: 'var(--color-primary)',
     tag: '웹 개발',
     tagType: 'tag-primary',
     title: '웹사이트\n& 웹앱 개발',
@@ -18,7 +22,9 @@ const SERVICES = [
     features: ['기업 홈페이지', '쇼핑몰 / 커머스', '관리자 대시보드', 'SEO 최적화'],
   },
   {
-    icon: '🔧',
+    icon: 'build',
+    iconBg: 'rgba(200, 150, 10, 0.09)',
+    iconColor: 'var(--color-accent-yellow)',
     tag: '기술 지원',
     tagType: 'tag-yellow',
     title: '유지보수\n& 기술 컨설팅',
@@ -42,7 +48,17 @@ export default function Services() {
         <div className="services__grid">
           {SERVICES.map((s, i) => (
             <div key={i} className="service-card">
-              <div className="service-card__icon">{s.icon}</div>
+              <div
+                className="service-card__icon"
+                style={{ background: s.iconBg }}
+              >
+                <span
+                  className="ms-icon"
+                  style={{ color: s.iconColor, fontSize: '1.75rem', fontVariationSettings: "'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 40" }}
+                >
+                  {s.icon}
+                </span>
+              </div>
               <span className={`tag ${s.tagType} service-card__tag`}>{s.tag}</span>
               <h3 className="service-card__title">
                 {s.title.split('\n').map((line, j) => (
@@ -53,7 +69,12 @@ export default function Services() {
               <ul className="service-card__features">
                 {s.features.map((f, j) => (
                   <li key={j}>
-                    <span className="service-card__check">✓</span>
+                    <span
+                      className="ms-icon service-card__check"
+                      style={{ color: s.iconColor, fontVariationSettings: "'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20" }}
+                    >
+                      check
+                    </span>
                     {f}
                   </li>
                 ))}

@@ -1,6 +1,13 @@
 import { useState } from 'react';
 import './Contact.css';
 
+const INFO = [
+  { icon: 'mail', label: '이메일', val: 'contact@everguide.kr' },
+  { icon: 'corporate_fare', label: '설립일', val: '2026년 6월 8일' },
+  { icon: 'work', label: '전문 분야', val: '프로그램 개발 · 웹 개발' },
+  { icon: 'schedule', label: '응답 시간', val: '영업일 기준 24시간 이내' },
+];
+
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', company: '', service: '', message: '' });
   const [sent, setSent] = useState(false);
@@ -27,41 +34,36 @@ export default function Contact() {
             </p>
 
             <div className="contact__info-list">
-              <div className="contact__info-item">
-                <span className="contact__info-icon">📧</span>
-                <div>
-                  <span className="contact__info-label">이메일</span>
-                  <span className="contact__info-val">contact@everguide.kr</span>
+              {INFO.map((item, i) => (
+                <div key={i} className="contact__info-item">
+                  <div className="contact__info-icon">
+                    <span
+                      className="ms-icon"
+                      style={{ fontVariationSettings: "'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24" }}
+                    >
+                      {item.icon}
+                    </span>
+                  </div>
+                  <div>
+                    <span className="contact__info-label">{item.label}</span>
+                    <span className="contact__info-val">{item.val}</span>
+                  </div>
                 </div>
-              </div>
-              <div className="contact__info-item">
-                <span className="contact__info-icon">🏢</span>
-                <div>
-                  <span className="contact__info-label">설립일</span>
-                  <span className="contact__info-val">2026년 6월 8일</span>
-                </div>
-              </div>
-              <div className="contact__info-item">
-                <span className="contact__info-icon">💼</span>
-                <div>
-                  <span className="contact__info-label">전문 분야</span>
-                  <span className="contact__info-val">프로그램 개발 · 웹 개발</span>
-                </div>
-              </div>
-              <div className="contact__info-item">
-                <span className="contact__info-icon">⏰</span>
-                <div>
-                  <span className="contact__info-label">응답 시간</span>
-                  <span className="contact__info-val">영업일 기준 24시간 이내</span>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
 
           <div className="contact__right">
             {sent ? (
               <div className="contact__success">
-                <span className="contact__success-icon">✅</span>
+                <div className="contact__success-icon">
+                  <span
+                    className="ms-icon"
+                    style={{ fontVariationSettings: "'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 48", fontSize: '3rem', color: 'var(--color-primary)' }}
+                  >
+                    task_alt
+                  </span>
+                </div>
                 <h3>문의가 접수되었습니다!</h3>
                 <p>빠른 시일 내에 연락 드리겠습니다.</p>
                 <button className="btn btn-primary" onClick={() => setSent(false)}>
@@ -132,7 +134,10 @@ export default function Contact() {
                   />
                 </div>
                 <button className="btn btn-primary contact__submit" type="submit">
-                  문의 보내기 →
+                  문의 보내기
+                  <span className="ms-icon" style={{ fontSize: '1rem', fontVariationSettings: "'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 20" }}>
+                    arrow_forward
+                  </span>
                 </button>
               </form>
             )}

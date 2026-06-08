@@ -43,9 +43,18 @@ export default function Footer() {
           <div className="footer__links-group">
             <h4>연락처</h4>
             <ul>
-              <li>📧 contact@everguide.kr</li>
-              <li>🏢 설립: 2026. 06. 08</li>
-              <li>💼 프로그램 · 웹 개발</li>
+              <li>
+                <span className="ms-icon footer__contact-icon">mail</span>
+                contact@everguide.kr
+              </li>
+              <li>
+                <span className="ms-icon footer__contact-icon">corporate_fare</span>
+                설립: 2026. 06. 08
+              </li>
+              <li>
+                <span className="ms-icon footer__contact-icon">devices</span>
+                프로그램 · 웹 개발
+              </li>
             </ul>
           </div>
         </div>

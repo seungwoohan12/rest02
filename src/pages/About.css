@@ -94,8 +94,17 @@
 }
 
 .about__value-icon {
-  font-size: 1.75rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
+}
+
+.about__value-icon .ms-icon {
+  font-size: 1.25rem;
 }
 
 .about__value-title {
