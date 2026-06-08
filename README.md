@@ -1,16 +1,35 @@
-# React + Vite
+# EVERGUIDE 공식 웹사이트
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> IT 전문 개발사 EVERGUIDE의 공식 웹사이트 소스코드
 
-Currently, two official plugins are available:
+**라이브:** https://seungwoohan12.github.io/rest02
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 기술 스택
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **프레임워크:** React 19 + Vite 9
+- **스타일:** CSS Variables (No CSS Framework)
+- **배포:** GitHub Pages (gh-pages)
 
-## Expanding the ESLint configuration
+## 실행 방법
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev       # 개발 서버 (http://localhost:5173)
+npm run build     # 프로덕션 빌드
+npm run deploy    # GitHub Pages 배포
+```
+
+## 프로젝트 구조
+
+```
+src/
+├── styles/         # 디자인 토큰, 전역 스타일
+├── components/     # Navbar, Footer
+└── pages/          # Hero, Services, Portfolio, Team, About, Contact
+```
+
+## 설립
+
+2026년 6월 8일 · 대한민국
