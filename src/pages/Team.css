@@ -1,0 +1,95 @@
+.team {
+  background: var(--color-white);
+}
+
+.team__header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.team__header .tag {
+  margin-bottom: 0.75rem;
+}
+
+.team__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 360px));
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.team-card {
+  background: var(--color-off-white);
+  border-radius: var(--border-radius-lg);
+  padding: 2rem;
+  text-align: center;
+  border: 1px solid var(--color-light-gray);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.team-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.team-card__avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-white);
+  margin: 0 auto 1rem;
+  letter-spacing: 0.05em;
+}
+
+.team-card__name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.25rem;
+}
+
+.team-card__role {
+  font-size: 0.85rem;
+  color: var(--color-accent-red);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.team-card__desc {
+  font-size: 0.875rem;
+  color: var(--color-gray);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.team-card__skills {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.team__hire {
+  margin-top: 3rem;
+  text-align: center;
+  background: var(--color-off-white);
+  border: 1.5px dashed var(--color-primary-light);
+  border-radius: var(--border-radius-lg);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.team__hire-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
