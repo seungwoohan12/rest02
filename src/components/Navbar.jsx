@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import logoImg from '../assets/logo.png';
 import './Navbar.css';
 
 const NAV_LINKS = [
@@ -30,7 +31,7 @@ export default function Navbar() {
     <nav className={`navbar${scrolled ? ' navbar--scrolled' : ''}`}>
       <div className="container navbar__inner">
         <a className="navbar__logo" href="#hero" onClick={() => handleNavClick('#hero')}>
-          <span className="navbar__logo-mark">EG</span>
+          <img src={logoImg} alt="EVERGUIDE" className="navbar__logo-mark" />
           <span className="navbar__logo-text">EVERGUIDE</span>
         </a>
 

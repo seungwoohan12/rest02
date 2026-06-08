@@ -1,3 +1,4 @@
+import logoImg from '../assets/logo.png';
 import './Footer.css';
 
 export default function Footer() {
@@ -11,7 +12,7 @@ export default function Footer() {
         <div className="footer__top">
           <div className="footer__brand">
             <div className="footer__logo">
-              <span className="footer__logo-mark">EG</span>
+              <img src={logoImg} alt="EVERGUIDE" className="footer__logo-mark" />
               <span className="footer__logo-text">EVERGUIDE</span>
             </div>
             <p className="footer__tagline">
